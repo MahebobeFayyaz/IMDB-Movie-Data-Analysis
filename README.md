@@ -50,3 +50,21 @@ The architecture leverages the following AWS services:
   <img width="940" height="443" alt="image" src="https://github.com/user-attachments/assets/3fab7cb3-c030-4918-8e58-b1097e210a3b" />
 
 * Configure Amazon EventBridge and SNS for notifications on ETL success or failure.
+
+# Tech Stack
+* AWS Services: S3, Glue, Redshift, Athena, Quicksight, EventBridge, SNS
+* Programming Languages: Python (for Glue scripts and Lambda functions)
+* Frameworks/Tools: Boto3, Pandas, SQL
+* Visualization: AWS Quicksight
+# Features
+* Data Ingestion: Automatically loads raw IMDB data into S3.
+* Data Quality Validation: Implements Glue Data Quality Rules to ensure data consistency.
+* Data Transformation: Processes and routes records based on validation outcomes.
+* Data Storage:
+* Passed records → Redshift for analytics.
+* Failed records → S3 for further review via Athena and Quicksight.
+* Notifications: Uses EventBridge and SNS for alerts on ETL job status.
+# Getting Started
+* AWS Account with appropriate permissions.
+* Python environment with required dependencies (boto3, pandas).
+* IMDB movie dataset (sample files provided in the data/ folder).
