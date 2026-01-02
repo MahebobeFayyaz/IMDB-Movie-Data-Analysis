@@ -37,9 +37,16 @@ The architecture leverages the following AWS services:
 * Create a Schema for the Destination table.
 * Create a Glue Crawler to catalog the Redshift destination table.
   <img width="940" height="418" alt="image" src="https://github.com/user-attachments/assets/6e55f00a-d45e-4bfb-a33d-59d397224829" />
+<img width="940" height="456" alt="image" src="https://github.com/user-attachments/assets/0b2e1f34-cd21-48b2-9f85-6a6d8c85e86d" />
 
 * Implement an ETL workflow in AWS Glue:
 * Transform the data:
+  <img width="919" height="846" alt="image" src="https://github.com/user-attachments/assets/b2bb0777-7039-4539-94bd-6bcd01285648" />
+
 * Route failed records to an S3 bucket for further analysis using Athena and Quicksight.
+  <img width="940" height="437" alt="image" src="https://github.com/user-attachments/assets/2f1cf612-1caf-46fb-91ea-8be5c94885ba" />
+
 * Route passed records to the Redshift destination.
+  <img width="940" height="443" alt="image" src="https://github.com/user-attachments/assets/3fab7cb3-c030-4918-8e58-b1097e210a3b" />
+
 * Configure Amazon EventBridge and SNS for notifications on ETL success or failure.
